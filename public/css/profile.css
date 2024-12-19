@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #003366;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+.sidebar img.logo {
+    margin-bottom: 20px;
+    color: #000;
+    width: 200px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar a.active {
+    color: #ffa500;
+}
+
+.icon {
+    width: 40px;  
+    height: 40px; 
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: 60px;
+}
+
+.header {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #C2D2EC;
+    margin-bottom: 30px;
+    color: #000;
+    position: fixed;
+    padding: 20px 20px;
+    top: 0;
+    left: 250px;
+    right: 0;
+    z-index: 1;
+}
+
+.profile-card {
+    width: 350px;
+    background: linear-gradient(to bottom, #FFA726, #1976D2);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: auto;
+    padding-top: 40px;
+}
+
+.profile-card .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid white;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-card .content {
+    background-color: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.profile-card .content .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.profile-card .content .email {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.upload-btn,
+.save-btn {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 48%; /* Both buttons will occupy 48% of the container width */
+}
+
+.upload-btn {
+    background-color: #FFA726; /* Color for Edit Photo */
+}
+
+.save-btn {
+    background-color: #1976D2; /* Color for Save */
+}
+
+.upload-btn:hover {
+    background-color: #FB8C00;
+}
+
+.save-btn:hover {
+    background-color: #1565C0;
+}
+
+.sign-out {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 90%;
+}
+
+.sign-out:hover {
+    background-color: #d32f2f;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cancel-btn,
+.confirm-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.confirm-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.footer {
+    color: #000;
+    text-align: left;
+    font-size: 12px; 
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5; 
+    letter-spacing: 0.1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    bottom: 0;
+    height: 30px;
+    flex-shrink: 0;
+    margin-left: 250px;
+    z-index: 2;
+}
+
+.footer img.footer-logo {
+    width: 50px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.footer-line {
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 40px;
+}

@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #003366;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+.sidebar img.logo {
+    margin-bottom: 20px;
+    width: 200px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar a.active {
+    color: #ffa500;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #f0f4f8;
+    padding-top: 100px; /* Memberikan jarak dengan header */
+}
+
+.header {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #C2D2EC;
+    margin-bottom: 30px;
+    color: #000;
+    position: fixed;
+    padding: 20px;
+    top: 0;
+    left: 250px;
+    right: 0;
+    z-index: 1;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 70vh; /* Mengurangi tinggi agar tidak terlalu tinggi */
+    max-width: 1200px; /* Lebar kontainer lebih besar */
+    width: 100%;
+    margin: 30px auto; /* Pusatkan kontainer dan beri jarak */
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+.chat-input {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column; /* Menyusun elemen secara vertikal */
+    gap: 10px;
+    width: 100%; /* Pastikan lebar 100% */
+}
+
+.chat-input textarea {
+    flex: 1;
+    width: 94%; /* Mengisi lebar kontainer */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 0; /* Menghapus margin agar tidak ada perbedaan jarak */
+    background-color: #fafafa;
+    font-size: 14px;
+    height: 100px; /* Sesuaikan dengan tinggi input yang diinginkan */
+}
+
+.chat-bubble {
+    display: flex;
+    flex-direction: column; /* Susun secara vertikal */
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.chat-bubble.current-user {
+    align-items: flex-end; /* Jika pengguna saat ini, posisikan ke kanan */
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.username {
+    font-weight: bold;
+    color: #333;
+}
+
+.chat-content {
+    padding: 10px;
+    background: #e0e0e0;
+    border-radius: 12px;
+    max-width: 90%;
+    margin-top: 5px;
+}
+
+.chat-bubble.current-user .chat-content {
+    background: #007bff;
+    color: white;
+}
+
+.chat-footer {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #888;
+}
+
+.chat-bubble.current-user .chat-footer {
+    color: #f7f7f7;
+}
+
+.chat-input button {
+    width: 97%; /* Tombol mengisi lebar yang sama dengan input */
+    padding: 14px 20px;
+    background-color: #FFA500; /* Warna oranye untuk tombol kirim */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.2s ease;
+    margin: 0 auto; /* Menghapus margin agar tombol sejajar dengan input */
+}
+
+.chat-input button:hover {
+    background-color: #FF8C00; /* Warna oranye lebih gelap saat hover */
+    transform: scale(1.05); /* Efek sedikit membesar saat hover */
+}
+
+.footer {
+    color: #000;
+    text-align: left;
+    font-size: 12px; 
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5; 
+    letter-spacing: 0.1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    bottom: 0;
+    height: 30px;
+    flex-shrink: 0;
+    margin-left: 250px;
+    z-index: 2;
+}
+
+.footer img.footer-logo {
+    width: 50px;
+    height: 30px;
+    left: 800px;
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+
+.footer-line {
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 40px;
+}
